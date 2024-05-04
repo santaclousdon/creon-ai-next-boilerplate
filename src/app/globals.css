@@ -2,10 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url("/assets/fonts/MonumentExtended-Regular.woff2") format("woff2");
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,5 +39,56 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .text-fill-transparent {
+    -webkit-text-fill-color: transparent;
+  }
+
+  .background-clip {
+    -webkit-background-clip: text;
+  }
+
+  .nft-video-container:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 4.219vw;
+    right: 6.875vw;
+    width: 42.083vw;
+    height: 42.083vw;
+    background: linear-gradient(180deg, rgba(61, 139, 255, 0.44), #ab23ff);
+    mix-blend-mode: soft-light;
+    transform: rotate(180deg);
+  }
+
+  .nft-video:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    width: 62.102vw;
+    height: 6.461vw;
+    flex-shrink: 0;
+    background: var(--black, #000);
+    filter: blur(1.563vw);
+    z-index: 1;
+    top: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .nft-video:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    width: 62.102vw;
+    height: 6.461vw;
+    flex-shrink: 0;
+    background: var(--black, #000);
+    filter: blur(1.563vw);
+    z-index: 1;
+    bottom: 0;
+    transform: translate(-50%, 50%);
   }
 }

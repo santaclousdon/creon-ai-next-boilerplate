@@ -1,113 +1,127 @@
+import GradientText from "@/components/gradientText";
 import Image from "next/image";
+import { useRef, useEffect } from "react";
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <div className="w-full h-auto m-0 p-0 border-0 box-border no-underline align-baseline">
+      <div className="flex flex-col w-full relative">
+        <div className="flex absolute left-0 top-0 justify-between w-full px-[50px] py-[30px] items-center z-20">
+          <img
+            className="object-fit"
+            src="/assets/images/logo.png"
+            alt="logo"
+          />
+          <div className="flex gap-[58px] font-satoshi">
+            <div className="flex gap-[40px] items-center">
+              <div className="font-bold text-white text-lg  leading-custom">
+                Creon Pass
+              </div>
+              <div className="flex gap-1">
+                <div className="font-bold text-white text-lg  leading-custom">
+                  Token
+                </div>
+                <div className="flex items-center h-[14px] px-1 py-[2px] text-[#ab23ff] bg-black font-satoshi rounded-full text-[10px] font-bold  leading-custom">
+                  SOON
+                </div>
+              </div>
+              <div className="flex gap-1">
+                <div className="font-bold text-white text-lg  leading-custom">
+                  AI Revenue
+                </div>
+                <div className="flex items-center h-[14px] px-1 py-[2px] text-[#ab23ff] bg-black font-satoshi rounded-full text-[10px] font-bold  leading-custom">
+                  SOON
+                </div>
+              </div>
+              <div className="flex gap-1">
+                <div className="font-bold text-white text-lg  leading-custom">
+                  AI Launchpad
+                </div>
+                <div className="flex items-center h-[14px] px-1 py-[2px] text-[#ab23ff] bg-black rounded-full text-[10px] font-bold  leading-custom">
+                  SOON
+                </div>
+              </div>
+            </div>
+            <div className="px-[30px] pt-[9px] pb-[11px] text-[18px] text-white font-bold rounded-md border-2 border-white leading-custom">
+              Connect
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col min-h-screen justify-between">
+          <div className="flex flex-col relative justify-end px-[240px] pt-0 pb-[102px] gap-[40px]">
+            <div className="absolute left-0 top-0 w-full h-full z-0 object-cover">
+              <video
+                className="w-full h-full object-cover z-0"
+                autoPlay
+                loop
+                playsInline
+                muted
+              >
+                <source
+                  src="/assets/videos/main-background-video.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <img
+              className="absolute top-0 left-0 bg-transparent mix-blend-soft-light"
+              src="/assets/images/background.png"
+              alt="background"
             />
-          </a>
+            <h2 className="font-monument font-normal text-[68px] text-white z-10 mt-[555px]  leading-custom">
+              THE WORLD'S FIRST <br></br>PLATFORM FOR TOKENIZING AI BLOCKCHAIN
+              PROJECTS
+            </h2>
+            <GradientText
+              text="Hold the Creon Pass NFT and earn passive income from AI Tools"
+              fontSize="22px"
+              border={true}
+            />
+          </div>
+        </div>
+        <div className="nft-video-container flex justify-between items-center py-[81px] pl-[240px] pr-[132px] overflow-hidden relative">
+          <div className="flex flex-col">
+            <h2 className="flex font-monument leading-custom pb-[30px] text-[68px] text-white border-b-[1px] border-b-[#13171d] mb-[30px]">
+              CREON PASS NFT
+            </h2>
+            <GradientText
+              text="The Creon NFT pass unlocks access to AI projects, the Creon launchpad, and a ticket to generate passive income through AI-driven tools."
+              fontSize="22px"
+              border={false}
+            />
+            <div className="flex flex-col items-start gap-[10px] mt-[40px] font-satoshi text-[18px] text-white mb-[72px]">
+              <div className="px-[18px] pt-[12px] pb-[16px] h-max leading-[130%] border border-[#13171d] rounded-md">
+                Pre-launch investment opportunities for upcoming AI projects
+              </div>
+              <div className="px-[18px] pt-[12px] pb-[16px] h-max leading-[130%] border border-[#13171d] rounded-md">
+                Free and early access to Creon built AI projects
+              </div>
+              <div className="px-[18px] pt-[12px] pb-[16px] h-max leading-[130%] border border-[#13171d] rounded-md">
+                Higher allocation limits on the Creon AI Launchpad
+              </div>
+              <div className="px-[18px] pt-[12px] pb-[16px] h-max leading-[130%] border border-[#13171d] rounded-md">
+                Revenue share distribution from Creon built AI projects
+              </div>
+            </div>
+            <button className="w-[453px] bg-gradient-to-r from-[#3D8BFF] to-[#AB23FF] px-[162px] pt-[16px] pb-[18px] text-[18px] font-bold text-white font-satoshi rounded-md leading-custom">
+              Buy Creon Pass
+            </button>
+          </div>
+          <div className="nft-video w-[808px] h-[808px] flex-shrink-0 relative">
+            <video
+              className="object-cover w-full h-full before:bg-black"
+              autoPlay
+              loop
+              playsInline
+              muted
+            >
+              <source src="/assets/videos/nft-video.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
-}
+};
+
+export default Home;
