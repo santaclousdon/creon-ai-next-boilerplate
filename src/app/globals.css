@@ -91,4 +91,29 @@ body {
     bottom: 0;
     transform: translate(-50%, 50%);
   }
+
+  .creon-video-container:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 49.323vw;
+    height: 25.26vw;
+    border-radius: 0.313vw;
+    background: linear-gradient(180deg, #3d8bff, #ab23ff);
+    mix-blend-mode: soft-light;
+    transform: rotate(180deg);
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ab23ff;
+    border-radius: 1px;
+  }
 }
