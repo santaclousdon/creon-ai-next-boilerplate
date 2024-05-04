@@ -75,11 +75,12 @@ const Home = () => {
             <GradientText
               text="Hold the Creon Pass NFT and earn passive income from AI Tools"
               fontSize="22px"
+              fontFamily="satoshi"
               border={true}
             />
           </div>
         </div>
-        <div className="nft-video-container flex justify-between items-center py-[81px] pl-[240px] pr-[132px] overflow-hidden relative">
+        <div className="nft-video-container flex justify-between items-center py-[81px] pl-[240px] pr-[132px] gap-[40px] overflow-hidden relative">
           <div className="flex flex-col">
             <h2 className="flex font-monument leading-custom pb-[30px] text-[68px] text-white border-b-[1px] border-b-[#13171d] mb-[30px]">
               CREON PASS NFT
@@ -87,6 +88,7 @@ const Home = () => {
             <GradientText
               text="The Creon NFT pass unlocks access to AI projects, the Creon launchpad, and a ticket to generate passive income through AI-driven tools."
               fontSize="22px"
+              fontFamily="satoshi"
               border={false}
             />
             <div className="flex flex-col items-start gap-[10px] mt-[40px] font-satoshi text-[18px] text-white mb-[72px]">
@@ -117,6 +119,56 @@ const Home = () => {
             >
               <source src="/assets/videos/nft-video.mp4" type="video/mp4" />
             </video>
+          </div>
+        </div>
+        <div className="block px-[240px] pt-[120px] pb-[141px]">
+          <h2 className="font-monument leading-custom text-white text-[68px]">
+            PROFITING THROUGH
+          </h2>
+          <div className="flex justify-end mt-[20px]">
+            <GradientText
+              text="AI INNOVATION & DECENTRALIZATION"
+              border={false}
+              fontSize="38px"
+              fontFamily="monument"
+            />
+          </div>
+          <div className="creon-video-container flex justify-between relative overflow-hidden mt-[83px] gap-[38px]">
+            <video
+              className="w-[49.323vw] h-[25.26vw] object-cover rounded-md flex-shrink-0"
+              autoPlay
+              loop
+              playsInline
+              muted
+            >
+              <source src="/assets/videos/creon-logo.mp4" type="video/mp4" />
+            </video>
+            <div className="flex flex-col font-satoshi text-white px-[30px] justify-center border-x-[1px] border-x-[#13171d]">
+              <h4 className="text-[22px] font-bold leading-[130%]">
+                The dynamic community driven business model of the future
+              </h4>
+              <p className="text-[18px] leading-[130%] mt-[28px] font-normal">
+                At Creon, we blend the power of AI tools with the dynamic crypto
+                and NFT markets, utilizing an innovative business model to drive
+                profitability. This approach empowers our community, as our NFT
+                and token holders directly benefit from the growth and
+                prosperity of the Creon network, creating a win-win scenario for
+                both our community and for the projects we launch.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-between relative px-[240px] pt-[115px] gap-[189px]">
+          <div className="flex flex-col">
+            <h3 className="text-white font-monument text-[38px] leading-[120%]">
+              OUR VISION IS TO SUPPORT THE INNOVATION OF AI BLOCKCHAIN PROJECTS
+            </h3>
+            <GradientText
+              text="WHILE PRIORITIZING COMMUNITIES AND DEMORCRATIZING PROFITS"
+              fontFamily="monument"
+              fontSize="38px"
+              border={false}
+            />
           </div>
         </div>
       </div>
