@@ -49,6 +49,28 @@ body {
     -webkit-background-clip: text;
   }
 
+  .gradient-border:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(90deg, #3d8bff, #ab23ff);
+  }
+
+  .gradient-border:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #3d8bff, #ab23ff);
+  }
+
   .nft-video-container:after {
     content: "";
     position: absolute;
@@ -102,6 +124,32 @@ body {
     background: linear-gradient(180deg, #3d8bff, #ab23ff);
     mix-blend-mode: soft-light;
     transform: rotate(180deg);
+  }
+
+  .roadmap-video:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    background: linear-gradient(180deg, #3d8bff, #ab23ff);
+    mix-blend-mode: soft-light;
+    transform: rotate(180deg);
+  }
+
+  .roadmap-video:after {
+    content: "";
+    display: block;
+    background-image: url(/assets/images/blur-video.webp);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
   }
 
   ::-webkit-scrollbar {
