@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       width: {
+        'laptop': '1225px',
         'mobile': '375px',
       },
       backgroundImage: {
@@ -30,7 +31,13 @@ const config: Config = {
       },
       transitionProperty: {
         'height': 'height'
+      },
+      translate: {
+        'minus-half-x': '-50%',
       }
+    },
+    screens: {
+      'laptop': '1225px',
     },
   },
   plugins: [],
