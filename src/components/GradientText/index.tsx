@@ -15,15 +15,15 @@ const GradientText: React.FC<IGradientTextProps> = ({
     <>
       {!border ? (
         <div
-          style={{ fontSize, fontFamily }}
-          className="text-fill-transparent background-clip bg-gradient-to-r from-[#3D8BFF] to-[#AB23FF] z-10 max-w-max leading-130%"
+          style={{ fontFamily }}
+          className={`text-fill-transparent background-clip bg-gradient-to-r from-[#3D8BFF] to-[#AB23FF] z-10 max-w-max leading-130% ${fontSize}`}
         >
           {text}
         </div>
       ) : (
         <div
-          style={{ fontSize, fontFamily }}
-          className="gradient-border text-fill-transparent background-clip bg-gradient-to-r from-[#3D8BFF] to-[#AB23FF] z-10 max-w-max leading-130% relative py-[0.365vw]"
+          style={{ fontFamily }}
+          className={`gradient-border text-fill-transparent background-clip bg-gradient-to-r from-[#3D8BFF] to-[#AB23FF] z-10 max-w-max leading-130% font-bold relative py-[0.365vw] ${fontSize}`}
         >
           {text}
         </div>

@@ -18,10 +18,10 @@ const Accordion: React.FC<IAccordionProps> = ({
   active,
 }) => {
   return (
-    <div className="flex flex-col pb-[1.563vw] border-b border-b-[#13171d] relative transition-all duration-500 ease-out">
-      <div className="flex justify-between gap-[30px]">
+    <div className="flex flex-col pb-[1.563vw] border-b border-b-[#13171d] relative transition-all duration-500 ease-out max-[600px]:gap-[5.333vw]">
+      <div className="flex justify-between gap-[30px] max-[600px]:gap-[5.333vw]">
         {icon}
-        <div className="flex items-center justify-between text-white font-satoshi w-[21.979vw]">
+        <div className="flex items-center justify-between text-white font-satoshi w-[21.979vw] max-[600px]:w-[67.2vw]">
           <span className=" text-[22px] leading-[130%] font-bold">
             {headerOne} <br></br> {headerTwo}
           </span>
@@ -33,7 +33,7 @@ const Accordion: React.FC<IAccordionProps> = ({
       <div className="flex justify-end">
         <div
           className={
-            "text-[18px] leading-[130%] text-white pt-[28px] w-[21.979vw] transition-opacity duration-300 ease-out " +
+            "text-[18px] leading-[130%] text-white pt-[28px] w-[21.979vw] transition-opacity duration-300 ease-out max-[600px]:w-[67.2vw] " +
             (active ? "block" : "hidden")
           }
         >

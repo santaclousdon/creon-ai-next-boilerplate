@@ -99,6 +99,39 @@ body {
     transform: translate(-50%, -50%);
   }
 
+  @media (max-width: 600px) {
+    .nft-video-container:after {
+      top: 82.133vw;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%) rotate(180deg);
+      width: 129.333vw;
+      height: 129.333vw;
+    }
+
+    .nft-video:after {
+      width: 206.133vw;
+      height: 21.333vw;
+      filter: blur(4.802vw);
+    }
+
+    .nft-video:before {
+      width: 206.133vw;
+      height: 21.333vw;
+      filter: blur(4.802vw);
+    }
+
+    .creon-video-container:before {
+      height: 46.933vw !important;
+      border-radius: 1.6vw;
+      width: 100% !important;
+    }
+
+    .roadmap-video:after {
+      background-image: url(/assets/images/blur-video-mobile.webp);
+    }
+  }
+
   .nft-video:after {
     content: "";
     display: block;
