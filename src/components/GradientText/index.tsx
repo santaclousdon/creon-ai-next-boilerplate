@@ -23,7 +23,7 @@ const GradientText: React.FC<IGradientTextProps> = ({
       ) : (
         <div
           style={{ fontSize, fontFamily }}
-          className="gradient-border text-fill-transparent background-clip bg-gradient-to-r from-[#3D8BFF] to-[#AB23FF] z-10 max-w-max leading-130% relative pt-[7px] pb-[12px]"
+          className="gradient-border text-fill-transparent background-clip bg-gradient-to-r from-[#3D8BFF] to-[#AB23FF] z-10 max-w-max leading-130% relative py-[0.365vw]"
         >
           {text}
         </div>
