@@ -21,6 +21,12 @@ const config: Config = {
         'custom': '110%',
         '130%': '130%',
         '120%': '120%'
+      },
+      transitionDuration: {
+        '250': '250ms'
+      },
+      transitionProperty: {
+        'height': 'height'
       }
     },
   },

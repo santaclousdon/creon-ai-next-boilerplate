@@ -1,11 +1,11 @@
-type GradientTextProps = {
+type IGradientTextProps = {
   text: string;
   fontSize: string;
   fontFamily: string;
   border: boolean;
 };
 
-const GradientText: React.FC<GradientTextProps> = ({
+const GradientText: React.FC<IGradientTextProps> = ({
   text,
   fontSize,
   fontFamily,
@@ -23,7 +23,7 @@ const GradientText: React.FC<GradientTextProps> = ({
       ) : (
         <div
           style={{ fontSize, fontFamily }}
-          className="text-fill-transparent background-clip bg-gradient-to-r from-[#3D8BFF] to-[#AB23FF] z-10 max-w-max leading-130% relative before:content-[''] before:absolute before:left-0 before:top:0 before:w-full before:block before:h-1px"
+          className="gradient-border text-fill-transparent background-clip bg-gradient-to-r from-[#3D8BFF] to-[#AB23FF] z-10 max-w-max leading-130% relative pt-[7px] pb-[12px]"
         >
           {text}
         </div>
