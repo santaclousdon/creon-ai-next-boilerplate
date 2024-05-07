@@ -11,7 +11,7 @@ const CloseSVG = () => {
       <path
         d="M13 13L19 19M25 25L19 19M19 19L25 13L13 25"
         stroke="white"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   );
