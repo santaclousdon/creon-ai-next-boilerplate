@@ -196,7 +196,7 @@ const Home = () => {
             </h2>
             <GradientText
               text="The Creon NFT pass unlocks access to AI projects, the Creon launchpad, and a ticket to generate passive income through AI-driven tools."
-              fontSize="1.146vw max-[600px]:text-[4.8vw]"
+              fontSize="text-[1.146vw] max-[600px]:text-[4.8vw]"
               fontFamily="satoshi"
               border={false}
             />
@@ -218,7 +218,7 @@ const Home = () => {
               Buy Creon Pass
             </button>
           </div>
-          <div className="nft-video w-[42.083vw] h-[42.083vw] flex-shrink-0 relative max-[600px]:absolute max-[600px]:top-[82.133vw] max-[600px]:right-auto max-[600px]:left-1/2 max-[600px]:w-[129.333vw] max-[600px]:h-[129.333vw] max-[600px]:transform translate-x-[-50%]">
+          <div className="nft-video w-[42.083vw] h-[42.083vw] flex-shrink-0 relative max-[600px]:absolute max-[600px]:top-[82.133vw] max-[600px]:right-auto max-[600px]:left-1/2 max-[600px]:w-[129.333vw] max-[600px]:h-[129.333vw] max-[600px]:transform max-[600px]:translate-x-[-50%]">
             <video
               className="object-cover w-full h-full before:bg-black"
               autoPlay
@@ -238,7 +238,7 @@ const Home = () => {
             <GradientText
               text="AI INNOVATION & DECENTRALIZATION"
               border={false}
-              fontSize="1.979vw max-[600px]:text-[5.867vw]"
+              fontSize="text-[1.979vw] max-[600px]:text-[5.867vw]"
               fontFamily="monument"
             />
           </div>
@@ -280,7 +280,7 @@ const Home = () => {
             <GradientText
               text="WHILE PRIORITIZING COMMUNITIES AND DEMORCRATIZING PROFITS"
               fontFamily="monument"
-              fontSize="1.979vw max-[600px]:text-[5.867vw]"
+              fontSize="text-[1.979vw] max-[600px]:text-[5.867vw]"
               border={false}
             />
           </div>
